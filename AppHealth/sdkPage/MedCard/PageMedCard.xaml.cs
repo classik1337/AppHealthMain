@@ -5,6 +5,9 @@ using System.Windows.Controls;
 using System.Configuration;
 using AppHealth.sdkPage.Auth;
 using System;
+using System.IO;
+using System.Diagnostics;
+
 
 namespace AppHealth.sdkPage.MedCard
 {
@@ -14,15 +17,15 @@ namespace AppHealth.sdkPage.MedCard
     /// </summary>
     public partial class PageMedCard : Page
     {
-        string name_table = "";
-        string surname_table = "";
-        string fathername_table = "";
-        string datebirthday_table = "";
-        string adresslive_table = "";
-        string adresspropiski_table = "";
-        string companyscarry = "";
-        string numberpolis_table = "";
-        string phone_table = "";
+        string name_table = null;
+        string surname_table = null;
+        string fathername_table = null;
+        string datebirthday_table = null;
+        string adresslive_table = null;
+        string adresspropiski_table = null;
+        string companyscarry = null;
+        string numberpolis_table = null;
+        string phone_table = null;
         void checkMedUser()
         {
             int IdUser = 0;
@@ -258,7 +261,40 @@ namespace AppHealth.sdkPage.MedCard
 
         private void Button_Click1(object sender, RoutedEventArgs e)
         {
+            string path = @"C:\temp\MedCard.txt";
 
+            // Если файл уже существует, удаляем его
+            if (File.Exists(path))
+            {
+                File.Delete(path);
+            }
+
+            // Создаем новый файл и записываем в него текст
+            using (StreamWriter sw = File.CreateText(path))
+            {
+                if (surname_table != null && name_table != null && fathername_table != null && adresslive_table != null && adresspropiski_table != null && datebirthday_table != null && companyscarry != null && numberpolis_table != null && phone_table != null)
+                {
+                sw.WriteLine("Фамилия: " + surname_table);
+                sw.WriteLine("Имя: "+ name_table);
+                sw.WriteLine("Отчество: " + fathername_table);
+                sw.WriteLine("Адресс проживанися: " + adresslive_table);
+                sw.WriteLine("Адресс прописки: " + adresspropiski_table);
+                sw.WriteLine("Дата рождения: " + datebirthday_table);
+                sw.WriteLine("Страховая компания: " + companyscarry);
+                sw.WriteLine("Номер полиса: " + numberpolis_table);
+                sw.WriteLine("Номер телефона: " + phone_table);
+                    
+                    MessageBox.Show("Фаил успешно скачен в C:\\temp\\MedCard.txt");
+                    Process.Start("explorer.exe", "C:\\temp\\MedCard.txt");
+                }
+                else
+                {
+                    MessageBox.Show("Перед тем как cкачать фаил добавьте в медицинскую карту данные!");
+                }
+
+                
+               
+            }
         }
     }
 }
