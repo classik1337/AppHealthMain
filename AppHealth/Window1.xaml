@@ -1,0 +1,74 @@
+﻿<Window x:Class="AppHealth.Window1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AppHealth"
+        mc:Ignorable="d"
+        Title="Window1" Height="768" Width="1280" >
+
+
+
+
+
+    <Grid >
+        <Viewbox HorizontalAlignment="Center" Stretch="Fill" VerticalAlignment="Center" Width="NaN" Height="NaN">
+            <Grid Height="752.04" Width="1280">
+                <Rectangle  HorizontalAlignment="Left" Height="752"  VerticalAlignment="Center" Width="200">
+                    <Rectangle.Fill>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <GradientStop Color="Black"/>
+                            <GradientStop Color="#FF2E2B3F" Offset="0.259"/>
+                            <GradientStop Color="#FF975EFF"/>
+                            <GradientStop Color="#FF46439A" Offset="0.133"/>
+                        </LinearGradientBrush>
+                    </Rectangle.Fill>
+                </Rectangle>
+                <Rectangle  HorizontalAlignment="Left" Height="69"  VerticalAlignment="Top" Width="1080" Fill="#2e2b3f" Margin="200,0,0,0"/>
+                <Frame x:Name="frame1" Margin="200,69,0,0"
+                    Source="{Binding}"
+                    NavigationUIVisibility="Hidden" 
+                    Foreground="#221f2e" 
+                     Background="#221f2e"
+                    BorderBrush="#FFF7F3F3" 
+              
+                               />
+
+
+                <Button Content="Обзор" Click="Button_Click1" HorizontalContentAlignment="Left"  HorizontalAlignment="Left" Margin="5,350,0,0" VerticalAlignment="Top" Width="195" Background="{x:Null}" Foreground="White" BorderBrush="{x:Null}" Height="32" FontSize="16"/>
+                <Button Content="Мед карта" HorizontalContentAlignment="Left" HorizontalAlignment="Left" Margin="5,450,0,0" VerticalAlignment="Top" Width="195" Background="{x:Null}" Foreground="White" BorderBrush="{x:Null}" Height="32" FontSize="16" Click="Button_Click_1"/>
+                <Button Content="Контакты" HorizontalContentAlignment="Left" HorizontalAlignment="Left" Margin="5,499,0,0" VerticalAlignment="Top" Width="195" Background="{x:Null}" Foreground="White" BorderBrush="{x:Null}" Height="32" FontSize="16" Click="Button_Click_4"/>
+                <Button Content="Здоровье" HorizontalContentAlignment="Left" HorizontalAlignment="Left" Margin="5,400,0,0" VerticalAlignment="Top" Width="195" Background="{x:Null}" Foreground="White" BorderBrush="{x:Null}" Height="32" FontSize="16" Click="Button_Click_2"/>
+                <Ellipse HorizontalAlignment="Left" Height="89" Margin="10,206,0,0" Stroke="Black" VerticalAlignment="Top" Width="89">
+                    <Ellipse.Fill>
+                        <ImageBrush ImageSource="/https___images.genius.com_cbe42469f4be2b301c2aedb17107a7f4.1000x1000x1.png"/>
+                    </Ellipse.Fill>
+                </Ellipse>
+                <Button Content="Профиль" Click="Button_Click"  HorizontalContentAlignment="Left" HorizontalAlignment="Left" Margin="6,300,0,0" VerticalAlignment="Top" Width="194" Background="{x:Null}" Foreground="White" BorderBrush="{x:Null}" Height="32" FontSize="16"/>
+                <Rectangle HorizontalAlignment="Left" Height="32" Margin="0,300,0,0" VerticalAlignment="Top" Width="5" Fill="White"/>
+                <Rectangle HorizontalAlignment="Left" Height="32" Margin="0,350,0,0" VerticalAlignment="Top" Width="5" Fill="White"/>
+                <Rectangle HorizontalAlignment="Left" Height="32" Margin="0,400,0,0" VerticalAlignment="Top" Width="5" Fill="White"/>
+                <Rectangle HorizontalAlignment="Left" Height="32" Margin="0,450,0,0" VerticalAlignment="Top" Width="5" Fill="White"/>
+
+                <Rectangle HorizontalAlignment="Left" Height="139" Margin="23,10,0,0" VerticalAlignment="Top" Width="152">
+                    <Rectangle.Fill>
+                        <ImageBrush ImageSource="/pngwing.com.png" />
+                    </Rectangle.Fill>
+                </Rectangle>
+                <TextBlock HorizontalAlignment="Left" Margin="44,149,0,0" TextWrapping="Wrap" Text="Health-Lirika" VerticalAlignment="Top" Foreground="White" FontSize="20"/>
+                <TextBox x:Name="mainLoginText"   HorizontalContentAlignment="Center" HorizontalAlignment="Left" Margin="99,265,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="101" Height="30" FontSize="20" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White"/>
+                <Rectangle HorizontalAlignment="Left" Height="32" Margin="0,499,0,0" VerticalAlignment="Top" Width="5" Fill="White"/>
+                <Button Content="Выйти из аккаунта" HorizontalContentAlignment="Left" HorizontalAlignment="Left" Margin="5,545,0,0" VerticalAlignment="Top" Width="195" Background="{x:Null}" Foreground="White" BorderBrush="{x:Null}" Height="32" FontSize="16" Click="Button_Click_5"/>
+                <Rectangle HorizontalAlignment="Left" Height="32" Margin="0,545,0,0" VerticalAlignment="Top" Width="5" Fill="White"/>
+
+
+
+
+            </Grid>
+        </Viewbox>
+        
+
+
+
+    </Grid>
+</Window>

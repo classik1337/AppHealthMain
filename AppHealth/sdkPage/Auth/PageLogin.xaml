@@ -1,0 +1,67 @@
+﻿<Page x:Class="AppHealth.sdkPage.Auth.PageLogin"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:AppHealth.sdkPage.Auth"
+      mc:Ignorable="d" 
+     d:DesignHeight="683" d:DesignWidth="1080"
+      Title="PageLogin">
+
+    <Grid >
+
+
+        <Image Source="/a-nice-picture-for-the-health-app-in-purple-tones-750094598.png" VerticalAlignment="Top" Stretch="Fill">
+            <Image.BitmapEffect>
+                <BlurBitmapEffect Radius="30" />
+            </Image.BitmapEffect>
+        </Image>
+        <Viewbox Height="NaN" Margin="195,94,195,94" Stretch="Fill" Width="NaN">
+            <Grid Height="246" Width="410">
+
+
+                <Rectangle Height="246" RadiusX="10" RadiusY="10" Opacity="0.6" Width="410"   Stroke="#FF5B5B5B" Fill="Black"/>
+
+                <Button Content="Войти" BorderBrush="White" BorderThickness="1"  HorizontalAlignment="Center" Margin="0,142,0,0" VerticalAlignment="Top" Height="23" Width="242" Click="Button_Click" Background="{x:Null}" Foreground="White">
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="5"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
+                <TextBox x:Name="TextPassword" HorizontalAlignment="Center" BorderBrush="White" BorderThickness="1" Margin="0,115,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="242" Height="22" SelectionBrush="{x:Null}" Background="{x:Null}" Foreground="White">
+                    <TextBox.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="5"/>
+                        </Style>
+                    </TextBox.Resources>
+                </TextBox>
+                <TextBox x:Name="TextLogin" BorderBrush="White" BorderThickness="1" HorizontalAlignment="Center" Margin="0,88,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="244" Height="22" Background="{x:Null}" Foreground="White">
+                    <TextBox.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="5"/>
+                        </Style>
+                    </TextBox.Resources>
+                </TextBox>
+                <TextBlock HorizontalAlignment="Center" Margin="0,56,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="244" TextAlignment="Center" Foreground="White" FontSize="20"><Run Language="ru-ru" Text="Вход"/></TextBlock>
+                <Button Content="Нет аккаунта?" BorderBrush="{x:Null}" BorderThickness="1"  HorizontalAlignment="Center" Margin="0,165,0,0" VerticalAlignment="Top" Height="18" Width="72" Click="Button_Click1" Background="{x:Null}" Foreground="#FFA7A7A7" FontSize="10">
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="5"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
+
+
+
+
+
+            </Grid>
+        </Viewbox>
+
+
+
+
+
+    </Grid>
+</Page>
