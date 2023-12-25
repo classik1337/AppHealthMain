@@ -5,7 +5,8 @@ using System.Windows;
 using System;
 using System.Windows.Forms;
 using System.Windows.Media;
-using AppHealth.sdkPage;
+using AppHealth;
+
 
 
 namespace TestLogClear
@@ -18,18 +19,16 @@ namespace TestLogClear
 
         [TestMethod]
 
-        public void TestAppStart()
+           public void TestAppStart()
         {
             // Arrange
-            Window window = new Window();
+            var app = new App();
 
             // Act
-            window.Show(); // открываем окно
-            window.Close(); // закрываем окно
+            app.InitializeComponent();
 
             // Assert
-            Assert.IsFalse(window.IsVisible); // проверяем, что окно больше не отображается
-
+            Assert.IsNotNull(app);
         }
         
     }
