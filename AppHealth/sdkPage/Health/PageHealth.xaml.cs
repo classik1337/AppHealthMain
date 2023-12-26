@@ -20,7 +20,12 @@ namespace AppHealth.sdkPage.Health
             frameHealth.Source = new Uri(PageMainButton, UriKind.Relative);
 
         }
-        
+        public static string Pulse { get; set; }
+        public static string Fire { get; set; }
+        public static string Ves { get; set; }
+        public static string  Rost { get; set; }  
+        public static string Go { get; set; }
+        public static string Sleep { get; set; }
          public void randomPulse()
         {
             Random rnd = new Random();
@@ -38,11 +43,12 @@ namespace AppHealth.sdkPage.Health
             rostText.Text = rost.ToString();
             goText.Text = go.ToString();
             sleepText.Text = sleep.ToString();
-            PageProperies pageProperies = new PageProperies();
-            pageProperies.pulseText.Text = pulse.ToString();
-            pageProperies.sleepText.Text = sleep.ToString();
-            pageProperies.fireText.Text = fire.ToString();
-            pageProperies.goText.Text = go.ToString();
+        
+    
+            Pulse = pulse.ToString();
+            Sleep = sleep.ToString();
+            Fire = fire.ToString();
+            Go = go.ToString();
 
 
         }

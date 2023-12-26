@@ -16,14 +16,23 @@ using System.Windows.Shapes;
 
 namespace AppHealth.sdkPage.Health.PropHealth
 {
+
     /// <summary>
     /// Логика взаимодействия для PageProperies.xaml
     /// </summary>
     public partial class PageProperies : Page
     {
+        string Pulse = PageHealth.Pulse;
+        string Fire = PageHealth.Fire;
+        string Sleep = PageHealth.Sleep;
+        string Go = PageHealth.Go;
         public PageProperies()
         {
             InitializeComponent();
+            pulseText.Text = Pulse;
+            fireText.Text = Fire;
+            sleepText.Text = Sleep;
+            goText.Text = Go;   
             
         }
     }
